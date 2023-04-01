@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import Cards from '../Cards/Cards';
+import Modal from '../Modal/Modal';
 
 const Main = () => {
     const [cards, setCards] = useState([])
@@ -30,10 +31,11 @@ const Main = () => {
     const handleModal = (id) =>{
         setId(id);
     }
-    console.log(singleData);
     return (
         <main>
+            <Modal singleData = {singleData}/>
             <Button clickFunction={sortByDate} id={'sort-by-date'}>Sort By Date</Button>
+            
             <Cards cards={cards} showAll={showAll} handleModal={handleModal}/>
            {
             !showAll &&  <Button clickFunction={handleShowAll}>See More</Button>

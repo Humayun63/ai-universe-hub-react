@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
+
 const SingleCard = ({ card, handleModal }) => {
     const { id, name, image, features, published_in } = card;
     return (
@@ -23,9 +24,9 @@ const SingleCard = ({ card, handleModal }) => {
                             <span> {published_in}</span>
                         </p>
                     </div>
-                    <button className='text-rose-400 text-2xl' onClick={()=>handleModal(id)}>
+                    <label htmlFor="my-modal-3" className='text-rose-400 text-2xl cursor-pointer' onClick={()=>handleModal(id)}>
                         <FontAwesomeIcon icon={faArrowRight} />
-                    </button>
+                    </label>
                 </div>
             </div>
         </div>
