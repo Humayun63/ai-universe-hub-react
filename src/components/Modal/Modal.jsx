@@ -2,7 +2,6 @@ import React from 'react';
 
 const Modal = ({ singleData }) => {
     const { description, features, image_link, input_output_examples, integrations, pricing, accuracy } = singleData;
-    console.log(accuracy?.score)
     return (
         <>
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
